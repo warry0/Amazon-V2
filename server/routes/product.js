@@ -2,18 +2,17 @@ const router = require("express").Router();
 const Product = require("../models/product");
 
 const upload = require("../middlewares/upload-photo");
-
 // POST req => creer new produit
 
 router.post("/products", upload.single("photo"), async (req, res) => {
   try {
     const product = new Product();
-    product.categoryID = req.body.categoryID;
     product.ownerID = req.body.ownerID;
-    product.title = req.body.title;
-    product.description = req.body.discription;
-    product.photo = req.file.location;
+    product.categoryID = req.body.categoryID;
     product.price = req.body.price;
+    product.title = req.body.title;
+    product.description = req.body.description;
+    product.photo = req.file.location;
     product.stockQuantity = req.body.stockQuantity;
 
     await product.save();
@@ -33,7 +32,7 @@ router.post("/products", upload.single("photo"), async (req, res) => {
 // GET req => tt les peoduit
 router.get("/products", async (req, res) => {
   try {
-    let products = await Product.find();
+    let products = await Product.find().populate("owner category").exec();
 
     res.json({
       success: true,
@@ -50,7 +49,7 @@ router.get("/products", async (req, res) => {
 // GET req => un produit
 router.get("/products/:id", async (req, res) => {
   try {
-    let product = await Product.findOne({ _id: req.params.id });
+    let product = await Product.findOne({ _id: req.params.id }).populate("owner category").exec();
 
     res.json({
       success: true,
@@ -72,7 +71,7 @@ router.put("/products/:id", upload.single("photo"), async (req, res) => {
       {
         $set: {
           title: req.body.title,
-          description: req.body.discription,
+          description: req.body.description,
           photo: req.file.location,
           category: req.body.categoryID,
           price: req.body.price,
@@ -96,7 +95,7 @@ router.put("/products/:id", upload.single("photo"), async (req, res) => {
 });
 
 // DELETE req => one by one
-router.delete("/products/:id", async (req ,res) => {
+router.delete("/products/:id", async (req, res) => {
   try {
     let deletedProduct = await Product.findOneAndDelete({ _id: req.params.id });
 

@@ -14,7 +14,7 @@ router.post("/owners", upload.single("photo"), async (req, res) => {
 
     res.json({
       success: true,
-      message: "proprietaire"
+      message: "auteur creer"
     });
   } catch (err) {
     console.log(err);
