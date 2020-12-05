@@ -14,13 +14,13 @@ router.post("/owners", upload.single("photo"), async (req, res) => {
 
     res.json({
       success: true,
-      message: "Bien enregistrer"
+      message: "Bien enregistrer",
     });
   } catch (err) {
     console.log(err);
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 });
@@ -31,12 +31,12 @@ router.get("/owners", async (req, res) => {
     let owners = await Owner.find();
 
     res.json({
-      owners: owners
+      owners: owners,
     });
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 });
