@@ -50,10 +50,10 @@ const productRoutes = require("./routes/product");
 app.use("/api", productRoutes);
 
 const categoryRoutes = require("./routes/category");
-app.use("/api", categoryRoutes );
+app.use("/api", categoryRoutes);
 
 const ownerRoutes = require("./routes/owner");
-app.use("/api", ownerRoutes );
+app.use("/api", ownerRoutes);
 
 app.listen(3000, (err) => {
   if (err) {

@@ -5,36 +5,26 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
           <div class="a-spacing-top-medium"></div>
-          <h2 style="text-align: center">Ajouter un nouveau propriétaire </h2>
+          <h2 style="text-align: center">Ajouter un nouveau propriétaire</h2>
           <form>
             <div class="a-spacing-top-medium">
-              <label> Nom du propriétaire </label>
-              <input
-                type="text"
-                class="a-input-text"
-                style="width: 100%"
-                v-model="name"
-              />
+              <label> Nom </label>
+              <input class="a-input-text" style="width: 100%" v-model="name" />
             </div>
             <div class="a-spacing-top-medium">
               <label> À propos </label>
-              <input
-                type="text"
-                class="a-input-text"
-                style="width: 100%"
-                v-model="about"
-              />
+              <input class="a-input-text" style="width: 100%" v-model="about" />
             </div>
             <div class="a-spacing-top-medium">
-                <label style="margin-bottom: 0px;">Ajouter une photo</label>
-                <div class="a-row a-spacing-top-medium">
-                  <label class="choosefile-button">
-                    <i class="fal fa-plus"></i>
-                    <input type="file" @change="onFileSelected" />
-                    <p style="margin-top: -70px">{{ fileName }}</p>
-                  </label>
-                </div>
+              <label style="margin-bottom: 0px;">Ajouter une photo</label>
+              <div class="a-row a-spacing-top-medium">
+                <label class="choosefile-button">
+                  <i class="fal fa-plus"></i>
+                  <input type="file" @change="onFileSelected" />
+                  <p style="margin-top: -70px">{{ fileName }}</p>
+                </label>
               </div>
+            </div>
             <!-- Button -->
             <hr />
             <div class="a-spacing-top-large">
@@ -47,12 +37,18 @@
           </form>
           <br />
           <ul class="list-group">
-            <li v-for="owner in owners" :key="owner._id" class="list-group-item">{{ owner.name }}</li>
+            <li
+              v-for="owner in owners"
+              :key="owner._id"
+              class="list-group-item"
+            >
+              {{ owner.name }}
+            </li>
           </ul>
         </div>
-        </div>
-        <div class="col-sm-3"></div>
       </div>
+      <div class="col-sm-3"></div>
+    </div>
   </main>
 </template>
 
@@ -95,13 +91,12 @@ export default {
         );
 
         this.owners.push(this.name);
-       
+        console.log(this.owners);
       } catch (err) {
         console.log(err);
       }
     }
   }
-       
 };
 </script>
 

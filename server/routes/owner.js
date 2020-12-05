@@ -5,7 +5,7 @@ const upload = require("../middlewares/upload-photo");
 // POST api
 router.post("/owners", upload.single("photo"), async (req, res) => {
   try {
-    
+    console.log(req.body);
     let owner = new Owner();
     owner.name = req.body.name;
     owner.about = req.body.about;
@@ -14,7 +14,7 @@ router.post("/owners", upload.single("photo"), async (req, res) => {
 
     res.json({
       success: true,
-      message: "auteur creer"
+      message: "Bien enregistrer"
     });
   } catch (err) {
     console.log(err);

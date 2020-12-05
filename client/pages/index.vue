@@ -24,7 +24,7 @@
                       <!-- image -->
                       <div class="col-sm-3 text-center">
                         <a href="#">
-                          <img :src="product.photo" style="width: 150px;" class="image-fluid" />
+                          <img :src="product.photo" style="width: 200px;" class="image-fluid" />
                         </a>
                       </div>
 
@@ -48,8 +48,8 @@
                             >par</span>
                           <span class="a-size-small a-color-secondary">
                             <a href="#" class="a-link-normal a-text-normal">
-                             {{product.owner.name}} </a
-                            >
+                             <!-- {{product.owner.name}} -->
+                            </a >
                           </span>
                         </div>
                         <!-- livraison -->
