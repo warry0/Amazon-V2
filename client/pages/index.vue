@@ -48,7 +48,7 @@
                             >par</span>
                           <span class="a-size-small a-color-secondary">
                             <a href="#" class="a-link-normal a-text-normal">
-                             <!-- {{product.owner.name}} -->
+                             {{product.owner.name}} 
                             </a >
                           </span>
                         </div>

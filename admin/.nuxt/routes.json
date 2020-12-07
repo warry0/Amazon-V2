@@ -3,36 +3,42 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_0e81151c"
   },
   {
     "name": "category",
     "path": "/category",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/category.vue",
-    "chunkName": "pages/category"
+    "chunkName": "pages/category",
+    "_name": "_071c2882"
   },
   {
     "name": "owner",
     "path": "/owner",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/owner.vue",
-    "chunkName": "pages/owner"
+    "chunkName": "pages/owner",
+    "_name": "_5f67e142"
   },
   {
     "name": "products",
     "path": "/products",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/products/index.vue",
-    "chunkName": "pages/products/index"
+    "chunkName": "pages/products/index",
+    "_name": "_5aa7b3e8"
   },
   {
     "name": "products-id",
     "path": "/products/:id",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/products/_id.vue",
-    "chunkName": "pages/products/_id"
+    "chunkName": "pages/products/_id",
+    "_name": "_463cdf60"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/dev/Desktop/Amazon/admin/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_2e38efe1"
   }
 ]

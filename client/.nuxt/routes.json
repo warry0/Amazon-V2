@@ -1,9 +1,14 @@
 [
   {
+    "name": "products-id",
+    "path": "/products/:id?",
+    "component": "/Users/dev/Desktop/Amazon/client/pages/products/_id.vue",
+    "chunkName": "pages/products/_id"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/dev/Desktop/Amazon/client/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_236f8719"
+    "chunkName": "pages/index"
   }
 ]
