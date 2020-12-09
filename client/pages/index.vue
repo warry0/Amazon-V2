@@ -10,7 +10,11 @@
           <FeaturedProduct />
           <main class="mainResults">
             <ul class="s-result-list">
-              <li class="s-result-item celwidget" v-for="product in products" :key="product._id">
+              <li
+                class="s-result-item celwidget"
+                v-for="product in products"
+                :key="product._id"
+              >
                 <div class="item-container">
                   <!-- bestseller -->
                   <div class="a-spacing-micro">
@@ -24,7 +28,11 @@
                       <!-- image -->
                       <div class="col-sm-3 text-center">
                         <a href="#">
-                          <img :src="product.photo" style="width: 200px;" class="image-fluid" />
+                          <img
+                            :src="product.photo"
+                            style="width: 200px;"
+                            class="image-fluid"
+                          />
                         </a>
                       </div>
 
@@ -33,7 +41,7 @@
                           <!-- titre et date -->
                           <a href="#" class="a-link-normal">
                             <h2 class="a-size-medium">
-                              {{product.title}}
+                              {{ product.title }}
                               <span class="a-letter-space"></span>
                               <span class="a-letter-space"></span>
                               <span class="a-size-small a-color-secondary">
@@ -45,11 +53,12 @@
                         <!-- autre nom -->
                         <div class="a-row a-spacing-small">
                           <span class="a-size-small a-color-secondary"
-                            >par</span>
+                            >par</span
+                          >
                           <span class="a-size-small a-color-secondary">
                             <a href="#" class="a-link-normal a-text-normal">
-                             {{product.owner.name}} 
-                            </a >
+                              {{ product.owner.name }}
+                            </a>
                           </span>
                         </div>
                         <!-- livraison -->
@@ -67,11 +76,15 @@
                             <!-- prix -->
                             <div class="a-row a-spacing-none">
                               <a href="#" class="a-link-normal a-text-normal">
-                                <span class="a-offscreen">{{product.price}}€</span>
+                                <span class="a-offscreen"
+                                  >{{ product.price }}€</span
+                                >
                                 <span class="a-color-base sx-zero-spacing">
                                   <span class="sx-price sx-price-large">
                                     <sup class="sx-price-currency">€</sup>
-                                    <span class="sx-price-whole">{{product.price}}</span>
+                                    <span class="sx-price-whole">{{
+                                      product.price
+                                    }}</span>
                                     <sup class="sx-price-fractional">00</sup>
                                   </span>
                                 </span>
@@ -143,7 +156,7 @@ export default {
   async asyncData({ $axios }) {
     try {
       let response = await $axios.$get("/api/products");
-      console.log(response);
+      console.log(response.products);
       return {
         products: response.products
       };
