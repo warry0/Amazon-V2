@@ -1,14 +1,37 @@
 [
   {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/dev/Desktop/Amazon/client/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_25d1aba0"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/Users/dev/Desktop/Amazon/client/pages/profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_01bb96a0"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/Users/dev/Desktop/Amazon/client/pages/signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_022808e1"
+  },
+  {
     "name": "products-id",
     "path": "/products/:id?",
     "component": "/Users/dev/Desktop/Amazon/client/pages/products/_id.vue",
-    "chunkName": "pages/products/_id"
+    "chunkName": "pages/products/_id",
+    "_name": "_49a4ea18"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/dev/Desktop/Amazon/client/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_236f8719"
   }
 ]

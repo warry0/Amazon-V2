@@ -89,21 +89,25 @@
                 </span>
               </a>
               <span class="icp-nav-link-border"></span>
-              <nuxt-link
-                to="/register"
+              <template v-if="$auth.$state.loggedIn">
+                <nuxt-link
+                to="/profile"
                 class="nav-a nav-a-2"
                 id="nav-link-accountList"
-                tabindex="0"
-              >
+                tabindex="0">
+                <span class="nav-line-1">Bonjour, </span>
+                <span class="nav-line-2">{{ $auth.$state.user.name }}</span>
+              </nuxt-link>
+              </template>
+              <template v-else>
+              <nuxt-link to="/login" class="nav-a nav-a-2" id="nav-link-accountList" tabindex="0">
                 <span class="nav-line-1">Bonjour, identifiez-vous</span>
                 <span class="nav-line-2">
                   Compte et liste
-                  <span
-                    class="nav-icon nav-arrow"
-                    style="visibility: visible"
-                  ></span>
+                  <span class="nav-icon nav-arrow" style="visibility: visible"></span>
                 </span>
               </nuxt-link>
+              </template>
               <nuxt-link to="/order" class="nav-a nav-a-2 nav-single-row-link">
                 <span class="nav-line-1"></span>
                 <span class="nav-line-2">Commande</span>

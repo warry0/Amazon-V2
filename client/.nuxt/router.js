@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _25d1aba0 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _01bb96a0 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
+const _022808e1 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
 const _49a4ea18 = () => interopDefault(import('../pages/products/_id.vue' /* webpackChunkName: "pages/products/_id" */))
 const _236f8719 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -23,6 +26,18 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/login",
+    component: _25d1aba0,
+    name: "login"
+  }, {
+    path: "/profile",
+    component: _01bb96a0,
+    name: "profile"
+  }, {
+    path: "/signup",
+    component: _022808e1,
+    name: "signup"
+  }, {
     path: "/products/:id?",
     component: _49a4ea18,
     name: "products-id"

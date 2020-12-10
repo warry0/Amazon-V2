@@ -149,7 +149,7 @@
                         <span class="a-button-toggle">
                           <span class="a-button-inner">
                             <a href="#" class="a-button-text">
-                              <span>Kindle</span>
+                              <span>Format Kindle</span>
                               <br />
                               <span class="a-color-secondary">-</span>
                             </a>

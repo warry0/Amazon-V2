@@ -55,6 +55,11 @@ app.use("/api", categoryRoutes);
 const ownerRoutes = require("./routes/owner");
 app.use("/api", ownerRoutes);
 
+const userRoutes = require("./routes/auth");
+app.use("/api", userRoutes);
+
+
+
 app.listen(3000, (err) => {
   if (err) {
     console.log(err);
